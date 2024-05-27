@@ -1,3 +1,5 @@
+require 'byebug'
+
 class StringCalculator
   
   def initialize(*numbers)
@@ -5,5 +7,6 @@ class StringCalculator
   end
 
   def add
+    @numbers.map(&:to_i).join(", ")
   end
 end
