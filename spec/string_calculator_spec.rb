@@ -75,6 +75,14 @@ describe 'String Calculator' do
       end
     end
 
+    context 'With multiple delimiters length' do
+      it 'should return error message' do
+        string_calculator = StringCalculator.new('//[*][%]\n1*2%3')
+
+        expect(string_calculator.add).to eq('6')
+      end
+    end
+
   end
 
 
