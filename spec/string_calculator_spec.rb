@@ -59,6 +59,14 @@ describe 'String Calculator' do
       end
     end
 
+    context 'Numbers greater than 1000' do
+      it 'should return sum' do
+        string_calculator = StringCalculator.new('1001, 2', '1,2')
+
+        expect(string_calculator.add).to eq('2, 3')
+      end
+    end
+
   end
 
 
