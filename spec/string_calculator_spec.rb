@@ -35,6 +35,14 @@ describe 'String Calculator' do
       end
     end
 
+    context 'with new line between numbers' do
+      it 'should return sum' do
+        string_calculator = StringCalculator.new('1\n2,3', '1,\n')
+
+        expect(string_calculator.add).to eq('6, 1')
+      end
+    end
+
   end
 
 
